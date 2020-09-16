@@ -10,12 +10,13 @@ from matplotlib import pyplot as plt
 from MNIST_model import *
 import argparse
 
-parser = argparse.ArgumentParser(description='first assignment')
+parser = argparse.ArgumentParser(description='second assignment')
 parser.add_argument('--epoch', type=int,default=100,help='number of layers')
 parser.add_argument('--Nlayer', type=int,default=3,help='number of layers')
 parser.add_argument('--layer_size',type=str,help='layer size')
 parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
-parser.add_argument('--wd', type=bool,default=False,help='weight decay')
+parser.add_argument('--wi', type=int, default=0,help='weight init')
+parser.add_argument('--wd', type=float,default=0,help='weight decay')
 parser.add_argument('--dropout', type=float,default=0.0,help='dropout rate')
 parser.add_argument('--op', type=str,default='adam',help='Optimizer')
 parser.add_argument('--path', type=int,default='1',help='Optimizer')
@@ -136,11 +137,11 @@ if __name__ == '__main__':
             highest_val_acc = val_acc
 
     print("Training finished.")
-
+    t=round(training_time,3)
     epoch_list = [i + 1 for i in range(cfg.epoch)]
     plt.title('Validation dataset accuracy plot')
     plt.xlabel('Epochs')
     plt.ylabel('Accuracy')
     plt.plot(epoch_list, val_acc_list)
-    plt.save('./saved_model/setting_'+str(args.path)+'result')
+    plt.savefig('./saved_model/setting_'+str(args.path)+'/result_'+str(t)+'.png')
     plt.show()

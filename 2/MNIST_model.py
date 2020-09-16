@@ -8,6 +8,7 @@ parser.add_argument('--epoch', type=int,default=100,help='number of layers')
 parser.add_argument('--Nlayer', type=int,default=3,help='number of layers')
 parser.add_argument('--layer_size',type=str,help='layer size')
 parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
+parser.add_argument('--wi', type=int, default=0,help='weight init')
 parser.add_argument('--wd', type=float,default=0,help='weight decay')
 parser.add_argument('--dropout', type=float,default=0.0,help='dropout rate')
 parser.add_argument('--op', type=str,default='adam',help='Optimizer')
@@ -19,6 +20,8 @@ class MNIST_model(nn.Module):
     def __init__(self):
         super().__init__()
         self.dr=args.dropout
+        self.wi=args.wi
+        print('weight init',self.wi)
         self.fc1 = nn.Linear(28*28, layer_list[0])
         self.d1=nn.Dropout(self.dr)
         self.fc2 = nn.Linear(layer_list[0], layer_list[1])
@@ -29,11 +32,13 @@ class MNIST_model(nn.Module):
             self.fc3 = nn.Linear(layer_list[1], layer_list[2])
             self.d3=nn.Dropout(self.dr)
             self.fc4 = nn.Linear(layer_list[2], 10)
-            nn.init.kaiming_normal_(self.fc4.weight.data)
-        
-        nn.init.kaiming_normal_(self.fc1.weight.data)
-        nn.init.kaiming_normal_(self.fc2.weight.data)
-        nn.init.kaiming_normal_(self.fc3.weight.data)
+            if self.wi:
+                nn.init.kaiming_normal_(self.fc4.weight.data)
+        if self.wi:
+            print('1')
+            nn.init.kaiming_normal_(self.fc1.weight.data)
+            nn.init.kaiming_normal_(self.fc2.weight.data)
+            nn.init.kaiming_normal_(self.fc3.weight.data)
     def forward(self, x):
         x = F.relu(self.d1(self.fc1(x)))
         x = F.relu(self.d2(self.fc2(x)))
