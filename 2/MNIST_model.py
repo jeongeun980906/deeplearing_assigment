@@ -35,7 +35,7 @@ class MNIST_model(nn.Module):
             if self.wi:
                 nn.init.kaiming_normal_(self.fc4.weight.data)
         if self.wi:
-            print('1')
+            print('init')
             nn.init.kaiming_normal_(self.fc1.weight.data)
             nn.init.kaiming_normal_(self.fc2.weight.data)
             nn.init.kaiming_normal_(self.fc3.weight.data)

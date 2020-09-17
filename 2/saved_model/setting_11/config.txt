@@ -1,0 +1,2 @@
+ python MNIST_train.py  --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005 --wi 1 --wd 0.0001 --dropout 0.0 --op Adam --path 11
+
