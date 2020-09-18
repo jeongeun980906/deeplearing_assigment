@@ -3,8 +3,21 @@ import torchvision.transforms as transforms
 import torchvision.datasets as dsets
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
-from MNIST_torch.MNIST_model import *
+from MNIST_model import *
+import argparse
 
+parser = argparse.ArgumentParser(description='second assignment')
+parser.add_argument('--epoch', type=int,default=100,help='number of layers')
+parser.add_argument('--Nlayer', type=int,default=3,help='number of layers')
+parser.add_argument('--layer_size',type=str,default="300,200",help='layer size')
+parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
+parser.add_argument('--wi', type=int, default=0,help='weight init')
+parser.add_argument('--wd', type=float,default=0,help='weight decay')
+parser.add_argument('--dropout', type=float,default=0.0,help='dropout rate')
+parser.add_argument('--op', type=str,default='adam',help='Optimizer')
+parser.add_argument('--path', type=int,default='1',help='setting number')
+parser.add_argument('--model', type=int,default='1',help='model number')
+args = parser.parse_args()
 
 def data_load():
 
@@ -40,7 +53,8 @@ if __name__ == "__main__":
 
 
     # 저장된 state 불러오기
-    save_path = "./saved_model/setting_1/epoch_1.pth"
+    #save_path = "./saved_model/setting_1/epoch_1.pth"
+    save_path = "./saved_model/setting_"+str(args.path)+'/epoch_'+str(args.model)+".pth"
     checkpoint = torch.load(save_path)
     model.load_state_dict(checkpoint['model_state_dict'])
     epoch = checkpoint['epoch']

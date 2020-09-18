@@ -6,13 +6,14 @@ import argparse
 parser = argparse.ArgumentParser(description='second assignment')
 parser.add_argument('--epoch', type=int,default=100,help='number of layers')
 parser.add_argument('--Nlayer', type=int,default=3,help='number of layers')
-parser.add_argument('--layer_size',type=str,help='layer size')
+parser.add_argument('--layer_size',type=str,default="300,200",help='layer size')
 parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
 parser.add_argument('--wi', type=int, default=0,help='weight init')
 parser.add_argument('--wd', type=float,default=0,help='weight decay')
 parser.add_argument('--dropout', type=float,default=0.0,help='dropout rate')
 parser.add_argument('--op', type=str,default='adam',help='Optimizer')
-parser.add_argument('--path', type=int,default='1',help='Optimizer')
+parser.add_argument('--path', type=int,default='1',help='setting number')
+parser.add_argument('--model', type=int,default='1',help='model number')
 args = parser.parse_args()
 layer_list = [int(item)for item in args.layer_size.split(',')]
 

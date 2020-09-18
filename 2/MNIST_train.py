@@ -13,13 +13,14 @@ import argparse
 parser = argparse.ArgumentParser(description='second assignment')
 parser.add_argument('--epoch', type=int,default=100,help='number of layers')
 parser.add_argument('--Nlayer', type=int,default=3,help='number of layers')
-parser.add_argument('--layer_size',type=str,help='layer size')
+parser.add_argument('--layer_size',type=str,default="300,200",help='layer size')
 parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
 parser.add_argument('--wi', type=int, default=0,help='weight init')
 parser.add_argument('--wd', type=float,default=0,help='weight decay')
 parser.add_argument('--dropout', type=float,default=0.0,help='dropout rate')
 parser.add_argument('--op', type=str,default='adam',help='Optimizer')
-parser.add_argument('--path', type=int,default='1',help='Optimizer')
+parser.add_argument('--path', type=int,default='1',help='setting number')
+parser.add_argument('--model', type=int,default='1',help='model number')
 args = parser.parse_args()
 
 def data_load():
@@ -78,10 +79,10 @@ if __name__ == '__main__':
     # optimizer 및 criterion 정의
     print(args.op)
     if args.op=='Adam':
-        optimizer = optim.Adam(model.parameters(), lr=cfg.lr,weight_decay=cfg.weight_decay)
+        optimizer = optim.Adam(model.parameters(), lr=cfg.lr)
     elif args.op=='Adadelta':
-        optimizer = optim.Adadelta(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
-    criterion = nn.CrossEntropyLoss()
+        optimizer = optim.Adadelta(model.parameters(), lr=cfg.lr)
+    criterion = nn.CrossEntropyLoss()      
 
     # training 시작
     start_time = time.time()
@@ -104,6 +105,12 @@ if __name__ == '__main__':
             optimizer.zero_grad()
             pred = model.forward(img.view(-1, 28 * 28))
             loss = criterion(pred, label)
+            if not cfg.weight_decay==0.0:
+                #print('w')
+                l2_reg = torch.tensor(0.)
+                for param in model.parameters():
+                    l2_reg += torch.norm(param).cpu()
+                loss+=cfg.weight_decay*l2_reg
             loss.backward()
             optimizer.step()
             train_loss += loss.item()
