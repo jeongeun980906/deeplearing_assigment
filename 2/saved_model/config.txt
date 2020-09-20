@@ -5,6 +5,7 @@ The number of test data:  10000
 cpu
 /home/jhmbabo/deeplearning/2/MNIST_model.py:47: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
   x = F.softmax(self.fc3(x))
+accuracy of the trained model:98.04%
 
 
 python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 2 --model 64
