@@ -1,6 +1,6 @@
 python MNIST_train.py  --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005  --wi 1 --wd 0.001 --dropout 0.1 --op Adam --path 15
 
-python MNIST_evaluation.py --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005  --wi 1 --wd 0.001 --dropout 0.1 --op Adam --path 15 --model 78
+python MNIST_evaluation.py --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005  --wi 1 --wd 0.001 --dropout 0.0 --op Adam --path 15 --model 78
 [MNIST_evaluation]
 weight init 1
 init
