@@ -1,0 +1,78 @@
+ python MNIST_evaluation.py  --epoch 30 --Nlayer 3 --layer_size "300,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 1 --model 30
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:47: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc3(x))
+
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 2 --model 64
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:97.92%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "600,600,800" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 3 --model 11
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:97.13%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 4 --model 43
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:98.06%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 5 --model 100
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:87.80%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 6 --model 47
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:96.88%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 7 --model 96
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:95.03%
+
+python MNIST_evaluation.py  --epoch 30 --Nlayer 4 --layer_size "200,200,200" --lr 0.001 --wi 0 --wd 0.0 --dropout 0.0 --op Adam --path 8 --model 34
+[MNIST_evaluation]
+weight init 0
+The number of test data:  10000
+cpu
+/home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  x = F.softmax(self.fc4(x))
+accuracy of the trained model:93.59%
+
+
+
+
+
+
+
