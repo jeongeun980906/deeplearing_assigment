@@ -1,6 +1,6 @@
 python MNIST_train.py  --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005 --wi 1 --wd 0.0005 --dropout 0.2 --op Adam --path 12
 
-python MNIST_evaluation.py  --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005 --wi 1 --wd 0.0005 --dropout 0.2 --op Adam --path 12 --model 65
+python MNIST_evaluation.py  --epoch 100 --Nlayer 4 --layer_size "256,256,256" --lr 0.0005 --wi 1 --wd 0.0005 --dropout 0.0 --op Adam --path 12 --model 65
 [MNIST_evaluation]
 weight init 1
 init
@@ -8,4 +8,6 @@ The number of test data:  10000
 cpu
 /home/jhmbabo/deeplearning/2/MNIST_model.py:50: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
   x = F.softmax(self.fc4(x))
+accuracy of the trained model:98.15%
+
 
