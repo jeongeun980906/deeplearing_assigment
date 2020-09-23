@@ -34,7 +34,7 @@ def generate_batch(test_data):
 if __name__ == "__main__":
     print('[MNIST_evaluation]')
     cfg = Config()
-
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # 모델 생성
     model = MNIST_model()
     model.eval()
@@ -55,7 +55,12 @@ if __name__ == "__main__":
     # 저장된 state 불러오기
     #save_path = "./saved_model/setting_1/epoch_1.pth"
     save_path = "./saved_model/setting_"+str(args.path)+'/epoch_'+str(args.model)+".pth"
-    checkpoint = torch.load(save_path)
+    print(device)
+    if torch.cuda.is_available():
+        print('!')
+        checkpoint = torch.load(save_path)
+    else:
+        checkpoint = torch.load(save_path,map_location='cpu')
     model.load_state_dict(checkpoint['model_state_dict'])
     epoch = checkpoint['epoch']
     correct_cnt = 0
