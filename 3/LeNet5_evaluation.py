@@ -4,14 +4,14 @@ import torchvision.transforms as transforms
 import numpy as np
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
-from DNN.COSE474.LeNet5_model import LeNet5_model, Config
+from LeNet5_model import LeNet5_model, Config
 import matplotlib.pyplot as plt
 import argparse
 
 parser = argparse.ArgumentParser(description='third assignment')
 parser.add_argument('--lr', type=float,default=0.001,help='learning rate')
 parser.add_argument('--ld', type=int,default=0,help='learning rate decay')
-parser.add_argument('--wi', type=float, default=100,help='weight init 100 for He else float')
+parser.add_argument('--wi', type=float, default=0.01,help='weight init 100 for He else float')
 parser.add_argument('--wd', type=float,default=0,help='weight decay')
 parser.add_argument('--da', type=int,default=0,help='data agumentation')
 parser.add_argument('--dr', type=float,default=0.1,help='model number')

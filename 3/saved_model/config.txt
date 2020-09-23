@@ -1,0 +1,20 @@
+python LeNet5_train.py --lr 0.001 --ld 0 --wi 0.01 --wd 0 --da 0 --dr 0.1 --path 1
+
+python LeNet5_evaluation.py --lr 0.001 --ld 0 --wi 0.01 --wd 0 --da 0 --dr 0.0 --path 1 --model 22
+accuracy of the trained model:65.09%
+
+python LeNet5_train.py --lr 0.001 --ld 0 --wi 0.01 --wd 0.0001 --da 0 --dr 0.1 --path 2
+python LeNet5_evaluation.py --lr 0.001 --ld 0 --wi 0.01 --wd 0 --da 0 --dr 0.0 --path 2 --model 22
+accuracy of the trained model:64.76%
+
+python LeNet5_train.py --lr 0.001 --ld 0 --wi 0.01 --wd 0.0001 --da 1 --dr 0.1 --path 3
+python LeNet5_evaluation.py --lr 0.001 --ld 0 --wi 0.01 --wd 0 --da 0 --dr 0.0 --path 3 --model 178
+accuracy of the trained model:71.84%
+
+
+python LeNet5_train.py --lr 0.001 --ld 1 --wi 100 --wd 0.0001 --da 1 --dr 0.1 --path 4
+python LeNet5_evaluation.py --lr 0.001 --ld 0 --wi 0.01 --wd 0 --da 0 --dr 0.0 --path 4 --model 179
+accuracy of the trained model:73.26%
+
+
+
