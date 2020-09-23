@@ -1,0 +1,1 @@
+python LeNet5_train.py --lr 0.001 --ld 0 --wi 100 --wd 0.0001 --da 1 --dr 0.0 --path 5
