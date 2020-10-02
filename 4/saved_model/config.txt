@@ -1,0 +1,77 @@
+python ResNet_train.py  --lr 0.1 --ld 0 --wd 0.00001 --da 1 --op 1 --path 1
+Namespace(bs=128, da=1, ep=200, gamma=0.1, ld=0, lr=0.1, model=1, mom=0.9, nl=5, op=1, path=1, wd=1e-05)
+python ResNet_evaluation.py  --lr 0.1 --ld 0 --wd 0 --da 1 --op 1 --path 1 --model 193
+accuracy of the trained model:90.39%
+
+
+python ResNet_train.py  --lr 0.1 --ld 1 --wd 0.00001 --da 1 --op 1 --path 2
+Namespace(bs=128, da=1, ep=200, gamma=0.1, ld=1, lr=0.1, model=1, mom=0.9, nl=5, op=1, path=2, wd=1e-05)
+python ResNet_evaluation.py  --lr 0.1 --ld 0 --nl 5 --wd 0 --da 1 --op 2 --path 2 --model 128
+accuracy of the trained model:90.70%
+
+
+python ResNet_train.py --nl 3  --lr 0.1 --ld 1 --wd 0.00001 --da 1 --op 1 --path 3
+Namespace(bs=128, da=1, ep=200, gamma=0.1, ld=1, lr=0.1, model=1, mom=0.9, nl=3, op=1, path=3, wd=1e-05)
+python ResNet_evaluation.py  --lr 0.1 --ld 0 --nl 3 --wd 0 --da 1 --op 1 --path 3 --model 188
+accuracy of the trained model:90.06%
+
+
+python ResNet_infer.py --path 2 --model 128
+GPU Available: True
+device: cuda
+imgs: Dataset ImageFolder
+    Number of datapoints: 12
+    Root location: ./example
+    StandardTransform
+Transform: Compose(
+               Resize(size=[32, 32], interpolation=PIL.Image.BILINEAR)
+               ToTensor()
+               Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+           )
+test_loader: <torch.utils.data.dataloader.DataLoader object at 0x7f64800fd6d0>
+Dataset ImageFolder
+    Number of datapoints: 12
+    Root location: ./example
+    StandardTransform
+Transform: Compose(
+               Resize(size=[32, 32], interpolation=PIL.Image.BILINEAR)
+               ToTensor()
+               Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+           )
+--------------------------------------
+truth: plane
+model prediction: plane
+--------------------------------------
+truth: car
+model prediction: car
+--------------------------------------
+truth: bird
+model prediction: bird
+--------------------------------------
+truth: cat
+model prediction: cat
+--------------------------------------
+truth: cat
+model prediction: cat
+--------------------------------------
+truth: deer
+model prediction: deer
+--------------------------------------
+truth: dog
+model prediction: dog
+--------------------------------------
+truth: frog
+model prediction: frog
+--------------------------------------
+truth: horse
+model prediction: horse
+--------------------------------------
+truth: ship
+model prediction: ship
+--------------------------------------
+truth: truck
+model prediction: truck
+--------------------------------------
+truth: truck
+model prediction: truck
+
