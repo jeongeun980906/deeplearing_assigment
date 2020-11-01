@@ -1,0 +1,31 @@
+python fastText_train.py --path 1 --size 100 --minn 2 --maxn 3
+
+python fastText_train.py --path 1 --mode 2
+eval
+0.46777173355229396
+[('thankyou', 0.8821251392364502), ('leviathan', 0.835390567779541), ('reconaissance', 0.8306435346603394), ('handicapper', 0.8268156051635742), ('predinner', 0.8216934204101562), ('harvestman', 0.8194727301597595), ('cervelat', 0.8173090219497681), ('forestier', 0.8171155452728271), ('foreshorten', 0.8160181045532227), ('mananger', 0.8139928579330444), ('premerger', 0.813853919506073), ('storeman', 0.8131517171859741), ('bernstein', 0.8126865029335022), ('financer', 0.8123315572738647), ('tendresse', 0.8111515045166016), ('reconnaisance', 0.810787558555603), ('charater', 0.8104806542396545), ('waldmani', 0.8102836608886719), ('bernanke', 0.8083858489990234), ('foreshock', 0.8083233833312988)]
+552402
+
+python fastText_train.py --path 2 --size 100
+
+python fastText_train.py --path 2 --mode 2
+eval
+0.5300215539361592
+[('thankyou', 0.8490839004516602), ('thank', 0.8447816371917725), ('thanking', 0.8094618916511536), ('gratefull', 0.7992228269577026), ('Thanking', 0.7904802560806274), ('thankyouverymuch', 0.7894156575202942), ('Ungrateful', 0.7853295803070068), ('congratulations', 0.7754627466201782), ('ThankYou', 0.7741835117340088), ('grateful', 0.7735071778297424), ('congratulation', 0.7703641653060913), ('thankful', 0.7699880599975586), ('Thanki', 0.7699449062347412), ('congratulating', 0.765051007270813), ('thank-yous', 0.7628786563873291), ('thank-you', 0.7623791694641113), ('congrats', 0.760812520980835), ('reccommend', 0.7568855881690979), ('congratulate', 0.7552099227905273), ('goodnights', 0.7543449401855469)]
+552402
+
+python fastText_train.py --path 3 --minn 2 --maxn 3 --workers 6 --iter 3
+
+python fastText_train.py --path 3 --mode 2
+eval
+0.5232987786102843
+[('thankyou', 0.9079724550247192), ('thane', 0.7574902176856995), (',you', 0.7560100555419922), ('Thankyou', 0.7560008764266968), ('thank-you', 0.7546076774597168), ('thant', 0.7538248896598816), ('happythankyoumoreplease', 0.7430187463760376), ('thang', 0.736847996711731), ('hanker', 0.7317076921463013), ('than1', 0.7314984798431396), (',,you', 0.7306806445121765), ('thankyouverymuch', 0.721878170967102), ('∧', 0.7154595255851746), ('\U00100051', 0.7150089740753174), ('hank', 0.7146250009536743), ('‹', 0.7145214080810547), ('hankering', 0.7144100666046143), ('Í', 0.7142597436904907), ('thanking', 0.7130991816520691), ('ThankYou', 0.7125188708305359)]
+
+python fastText_train.py --path 4
+
+python fastText_train.py --path 4 --mode 2
+eval
+0.5738478907933902
+[('thankyou', 0.8414729833602905), ('thank', 0.8027908802032471), ('thanking', 0.7861687541007996), ('thankyouverymuch', 0.7517627477645874), ('thanked', 0.7310831546783447), ('thank-you', 0.727399468421936), ('thank-yous', 0.7216233611106873), ('ThankYou', 0.714538037776947), ('gratefull', 0.7077505588531494), ('Thanking', 0.7041577696800232), ('grateful', 0.6997019052505493), ('thankful', 0.6978027820587158), ('than1', 0.6936085224151611), ('Thank-you', 0.6909580230712891), ('thanx', 0.6871117353439331), ('Thankyou', 0.6857911348342896), ('Ungrateful', 0.6852104663848877), ('thanks.', 0.6827288866043091), ('Thanki', 0.6787281036376953), ('congratulations', 0.6654412746429443)]
+552402
+
