@@ -1,0 +1,195 @@
+python sentence_cnn_train.py --path 1 --type 1
+
+python sentence_cnn_evaluation.py --path 1 --epoch 99 --type 1 --data 1
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:71.37%
+
+
+python sentence_cnn_train.py --path 2 --type 2
+
+python sentence_cnn_evaluation.py --path 2 --epoch 31 --type 2 --data 1
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:80.79%
+
+python sentence_cnn_train.py --path 3
+
+python sentence_cnn_evaluation.py --path 3 --epoch 5 --type 3 --data 1
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:80.32%
+
+
+python sentence_cnn_train.py --path 4 --type 4
+
+python sentence_cnn_evaluation.py --path 4 --epoch 56 --type 4 --data 1
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+
+ max length: 62
+accuracy of the trained model:80.41%
+
+python sentence_cnn_train.py --path 5 --ld 200  --fs "3,4,4,5" --fn 64
+python sentence_cnn_evaluation.py --path 5 --fs "3,4,4,5" --fn 64 --epoch 7
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:81.54%
+
+python sentence_cnn_evaluation.py --path 5 --fs "3,4,4,5" --fn 64 --epoch 30
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:81.17%
+
+python sentence_cnn_evaluation.py --path 5 --fs "3,4,4,5" --fn 64 --epoch 64
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:80.98%
+
+python sentence_cnn_train.py --path 6 --type 4 --ld 200  --fs "3,4,4,5" --fn 64
+
+python sentence_cnn_evaluation.py --path 6 --type 4 --fs "3,4,4,5" --fn 64 --epoch 62
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:81.83%
+
+python sentence_cnn_train.py --path 7 --type 2 --ld 200  --fs "3,4,4,5" --fn 64
+python sentence_cnn_evaluation.py --path 7 --type 2 --ld 200  --fs "3,4,4,5" --fn 64 --epoch 64
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:81.54%
+
+python sentence_cnn_train.py --path 8 --type 1 --ld 200  --fs "3,4,4,5" --fn 64
+
+python sentence_cnn_evaluation.py --path 8 --type 1 --ld 200  --fs "3,4,4,5" --fn 64 --epoch 86
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  2
+The number of test data:  1062
+ max length: 62
+accuracy of the trained model:69.59%
+
+python sentence_cnn_train.py --path 11 --type 1 --data 2
+python sentence_cnn_evaluation.py --path 11 --type 1 --data 2 --epoch 28
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:97.80%
+
+python sentence_cnn_train.py --path 12 --type 2 --data 2
+
+python sentence_cnn_evaluation.py --path 12 --type 2 --data 2 --epoch 13
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+
+ max length: 25
+accuracy of the trained model:98.20%
+
+python sentence_cnn_train.py --path 13 --data 2
+python sentence_cnn_evaluation.py --path 13 --type 3 --data 2 --epoch 37
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:99.00%
+
+python sentence_cnn_train.py --path 14 --type 4 --data 2
+python sentence_cnn_evaluation.py --path 14 --type 4 --data 2 --epoch 81
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:99.40%
+
+python sentence_cnn_train.py --path 15 --type 1 --ld 200  --fs "3,4,4,5" --fn 64 --data 2 
+
+python sentence_cnn_evaluation.py --path 15 --type 1 --fs "3,4,4,5" --fn 64 --data 2 --epoch 83[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:98.60%
+
+python sentence_cnn_train.py --path 16 --type 2 --ld 200  --fs "3,4,4,5" --fn 64 --data 2
+
+python sentence_cnn_evaluation.py --path 16 --type 2 --fs "3,4,4,5" --fn 64 --data 2 --epoch 23
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:98.60%
+
+python sentence_cnn_train.py --path 17 --type 3 --ld 200  --fs "3,4,4,5" --fn 64 --data 2
+
+python sentence_cnn_evaluation.py --path 17 --type 3 --fs "3,4,4,5" --fn 64 --data 2 --epoch 35
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+
+ max length: 25
+
+accuracy of the trained model:98.80%
+
+python sentence_cnn_train.py --path 16 --type 4 --ld 200  --fs "3,4,4,5" --fn 64 --data 2
+
+python sentence_cnn_evaluation.py --path 18 --type 4 --fs "3,4,4,5" --fn 64 --data 2 --epoch 85
+[CNN for sentence classification evaluation]
+GPU Available: True
+device: cuda
+cfg.nb_classes:  6
+The number of test data:  500
+ max length: 25
+accuracy of the trained model:98.60%
+
+
