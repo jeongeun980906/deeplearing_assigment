@@ -18,7 +18,7 @@ parser.add_argument('--fn', type=int,default=100,help='number of filters')
 parser.add_argument('--dr', type=float,default=0.5,help='dropout rate')
 parser.add_argument('--lc', type=float,default=0.0001,help='l2 constraint')
 parser.add_argument('--optimizer', type=int,default=1,help='1 adadelta, 2 adam')
-parser.add_argument('--ld', type=float,default=0.99,help='learing rate decay for step function')
+parser.add_argument('--ld', type=int,default=1000,help='learing rate decay for step function')
 parser.add_argument('--eds', type=int,default=300,help='embedding dimension size')
 
 args = parser.parse_args()

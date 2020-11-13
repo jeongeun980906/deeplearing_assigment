@@ -71,7 +71,6 @@ if __name__ == "__main__":
 
     if torch.cuda.is_available():
         model = model.to(device)
-    print(model)
     model.eval()
 
     # test 시작

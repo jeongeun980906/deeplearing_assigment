@@ -21,7 +21,7 @@ def clean_str(string):
     return string.strip().lower()
 
 def load_trec_data(train_file):
-    f = open("./data/TREC/testdata.txt", 'r')
+    f = open(train_file, 'r')
     x=[]
     y=[]
     label=['NUM', 'LOC', 'HUM', 'DESC', 'ENTY', 'ABBR']
@@ -31,14 +31,10 @@ def load_trec_data(train_file):
         line = f.readline()
         if not line: 
             break
-        y_1,_=line.split(":")
+        y_1,_=line.split(":",1)
         if b==1:
             y_1=y_1.replace("\ufeff", "")
         x_1=line.split(' ',1)[1]
-        try:
-            x_1, _ =x_1.split('?')
-        except ValueError:
-            pass
         i=label.index(y_1)
         x.append(clean_str(x_1))
         y.append(i)
